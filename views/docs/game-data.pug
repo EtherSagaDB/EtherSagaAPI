@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+    include ../includes/head.pug
+    title Game Data - EtherSagaAPI
+    body 
+        include ../includes/nav.pug
+        div.d-flex.justify-content-center
+            include ../includes/sidebar.pug
+            div.main-content.w-50.m-5
+                h1.d-flex.justify-content-center Game Data
+                br
+                p Obtain game content data for Ether Saga
+                hr
+                h2.endpoint#game-content /content
+                    p https://api.ethersagadb.com/content
+                p View a list of available content that is accessible in the API. Content is added rapidly when discovered and the ability to map it is made available.
+                br
+                h2.endpoint#lists /[content-name]
+                    p https://api.ethersagadb.com/skills
+                p Returns a list of content for the specified <code>content-name</code>
+                div.code-block
+                    pre 
+                        code [
+                        |
+                        |       {
+                        |           "Name": "Misty Fist",
+                        |           "Class": "Rogue",
+                        |           "ID": null,
+                        |           "Description": "Deals 299 damage. Delivers a steady two-handed blow.",
+                        |           "Lore": null,
+                        |           "Level": 30,
+                        |           "Type": "Physical",
+                        |           "CastTime": "1 second",
+                        |           "Vigor Cost": null,
+                        |           "ManaCost": 90,
+                        |           "CoolDown": null,
+                        |           "Duration": null
+                        |       },
+                        |       {
+                        |           "Name": "Snarling Strike",
+                        |           "Class": "Rogue",
+                        |           "ID": null,
+                        |           "Description": "Deals 243 damage. Aim low and strike deep.",
+                        |           "Lore": "",
+                        |           "Level": 30,
+                        |           "Type": "Ferus Spell",
+                        |           "CastTime": "1 second",
+                        |           "Vigor Cost": null,
+                        |           "ManaCost": 71,
+                        |           "CoolDown": "3 seconds",
+                        |           "Duration": null
+                        |       }
+                        |  ]
+                p You can access maps for each content endpoint by requesting <code>/content-name.map.json</code>
+                br
+                h2.endpoint#data /[content-name]/[id]
+                    p https://api.ethersagadb.com/skills/1
+                p Returns information about a specific object.
+                br
+                h2.endpoint#servers /servers
+                    p https://api.ethersagadb.com/servers
+                p Returns a list of current official and unofficial servers 
+                div.code-block
+                    pre 
+                        code [
+                        |
+                        |       {
+                        |           "name": "kdxy",
+                        |           "url": "http://kdxy.wanmei.com",
+                        |           "icon": "https://kdxy.games.wanmei.com/favicon.ico",
+                        |           "official": true,
+                        |           "gameVersion": ""
+                        |       },
+                        |       {
+                        |           "name": "Ether Saga Online",
+                        |           "url": "http://www.ethersagaonline.com/",
+                        |           "icon": "",
+                        |           "official": false,
+                        |           "gameVersion": ""
+                        |       }
+                        |  ]
+                //- pre 
+                //-     code This is a test of a codeblock
+        include ../includes/footer.pug

@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+    include ../includes/head.pug
+    title Documentation - EtherSagaAPI
+    body 
+        include ../includes/nav.pug
+        div.d-flex.justify-content-center
+            include ../includes/sidebar.pug
+            div.main-content.w-50.m-5
+                h1.d-flex.justify-content-center Documentation
+                br
+                h2#welcome Welcome
+                hr
+                p EtherSagaAPI provides Ether Saga Odyssey game data in a JSON format. You can fetch information about various game content.
+                br
+                h3#discord Discord 
+                hr
+                p Join our small group of developers and talk about your ideas for building Ether Saga apps! 
+                | The EtherSagaAPI discord is for developer talk, datamining, and the rebirth of Ether Saga.
+                br
+                a(href="https://discord.gg/jBwPxAN").d-flex.justify-content-center
+                    img(src="./Discord-Logo+Wordmark-Color.png", alt="").discord
+                br
+                h3#api-environments API Environments
+                hr
+                table.environments 
+                    thead 
+                        tr
+                            th Production
+                    tbody 
+                        tr 
+                            td https://api.ethersagadb.com/api/
+                p Please always use <code>https</code> when accessing the API.
+                br
+                h3#updating Keeping up to date 
+                hr
+                p The API is driven directly from the game files. All the data found is 100% raw data. Due to the game no longer receiving updates officially it is unlikely that many breaking changes to data structure will occur.
+                |
+                p In the event of a structure change, it is your responsibility to maintain your usage of the API. This includes any data changes or updates to the tooling. Much care is taken to avoid breaking-changes however these can happen. Please ensure you are part of the Discord and following updates happening to the site.
+                br
+                h3#api-access API Access 
+                hr
+                p The API can be fully accessed at anytime by hitting any of the desired endpoints. There is one method of rate-limiting whcih is based on Client IP.
+                |
+                p The rate limit values are as follows
+                - var ipLimit = rateLimit
+                table.environments 
+                    thead 
+                        tr
+                            th Client IP
+                    tbody 
+                        tr 
+                            td= rateLimit + ' / req / sec'
+                div.warning
+                    h6 Due Diligence 
+                    p Just because you can hit the API for X requests a second every second of the day; does not mean that you should. Game Content is very static and you should cache data as it is not anticipated to change much, if ever.
+                //- pre 
+                //-     code This is a test of a codeblock
+        include ../includes/footer.pug

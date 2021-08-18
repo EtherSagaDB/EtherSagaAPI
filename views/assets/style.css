@@ -1,0 +1,106 @@
+html, body, header, div, h1 {
+    background-color: #303030;
+    color: #fff;
+}
+
+header.nav-header {
+    background-color: #303030;
+}
+
+header.nav-header > img {
+    width: 3rem;
+    height: auto;
+}
+
+ul.docs-nav,
+ul.docs-nav > li > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.docs-nav > li > ul {
+  margin-left: 1rem;
+}
+
+li.sidebarheader a {
+    text-decoration: none;
+    color:#636dff;
+    font-size: 1.5rem;
+}
+
+ul.sidebarlinks > li > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+div.main-content {
+    background-color: #282828;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+div.main-content > h1 {
+    background-color: #282828;
+}
+
+img.discord {
+    width: 50%;
+    height: auto;
+    margin: 1rem;
+}
+
+.border-top {
+    border-color: #303030 !important;
+}
+
+table.environments {
+    vertical-align: baseline;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: #212326;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.3),0 2px 8px rgba(0,0,0,.2);
+}
+
+table.environments > thead > tr > th {
+    background-color: #404349;
+    color: #999faa;
+    padding: 0.5rem;
+}
+
+table.environments > tbody > tr > td {
+    padding: 0.5rem;
+}
+
+div.warning {
+    color: #999faa;
+    background-color: 282828;
+    border: 1px solid #ff7363;
+    padding: 1rem;
+}
+
+div.warning > h6 {
+    color: #ff7363;
+}
+
+h2.endpoint {
+    color: #d199ffa1;
+    border-left: solid 2px #d199ffa1;
+    padding: 0.1rem 1rem;
+    margin: 1rem;
+}
+
+h2.endpoint > p {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+}
+
+div.code-block {
+    background-color: #303030;
+    border-radius: 3px;
+}
