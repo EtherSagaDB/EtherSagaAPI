@@ -1,10 +1,15 @@
-html, body, header, div, h1 {
+html, body, header, h1 {
     background-color: #303030;
     color: #fff;
 }
 
 header.nav-header {
-    background-color: #303030;
+    background-color: #1b1b1b !important;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
+}
+
+header.nav-header a {
+    color: #fff;
 }
 
 header.nav-header > img {
@@ -25,7 +30,7 @@ ul.docs-nav > li > ul {
 
 li.sidebarheader a {
     text-decoration: none;
-    color:#636dff;
+    color:#acadff;
     font-size: 1.5rem;
 }
 
@@ -35,10 +40,16 @@ ul.sidebarlinks > li > a {
     font-size: 1rem;
 }
 
+div.sidebar {
+    background-color: #282828;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
+}
+
 div.main-content {
     background-color: #282828;
     padding: 1rem;
     border-radius: 5px;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 30%);
 }
 
 div.main-content > h1 {
