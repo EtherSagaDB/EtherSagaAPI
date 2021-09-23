@@ -124,6 +124,9 @@ router.use("/revivescroll", revivescroll);
 const rune = require("./routes/rune");
 router.use("/rune", rune);
 
+const search = require("./routes/search");
+router.use("/search", search);
+
 const seed = require("./routes/seed");
 router.use("/seed", seed);
 

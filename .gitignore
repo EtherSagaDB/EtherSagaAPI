@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Repo Specific
+/routes/api/icons/
+/routes/api/search/

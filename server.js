@@ -4,6 +4,9 @@ const app = express();
 const morgan = require('morgan')
 const port = process.env.PORT;
 
+const createSearch = require('./helpers/createSearch');
+createSearch();
+
 app.set("views", "./views");
 app.set("view engine", "pug");
 app.use(express.static("./views/assets"));
