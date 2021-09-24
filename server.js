@@ -16,7 +16,7 @@ app.set("trust proxy", 1);
 app.use(morgan('common'))
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("docs/index");
 });
 
 app.get("/404", (req, res) => {
