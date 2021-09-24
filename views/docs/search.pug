@@ -9,7 +9,21 @@ html(lang="en")
             div.main-content.w-50.m-5
                 h1.d-flex.justify-content-center Search
                 br
-
-                //- pre 
-                //-     code This is a test of a codeblock
+                p Search game content data for Ether Saga
+                hr
+                h2.endpoint#game-content /search
+                    p https://api.ethersagadb.com/api/search
+                p A <code>string</code> is required to search.
+                table.environments 
+                    thead 
+                        tr
+                            th Param 
+                            th Description
+                    tbody 
+                        tr 
+                            td index 
+                            td Search a specific series of indexes seperated by commas. <br> Accepts any endpoint from <code>/content</code>.
+                        tr 
+                            td limit 
+                            td Limit the number of results to show.
         include ../includes/footer.pug

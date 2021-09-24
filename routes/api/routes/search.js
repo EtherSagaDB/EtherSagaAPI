@@ -12,8 +12,16 @@ router.get("/", (req, res) => {
   if (!req.query.string) {
     res.json(noString);
   }
+  let index = req.query.index;
+  if (!req.query.index) {
+    index = index =
+      "aihelper,aircraft,books,camrecorder,changerecover,changeshape,couplejumpto,destroying,doubleexp,droptable,equipment,equipmentupgrade,estone,fireworks,fruit,garden,garden2,gardenfunc,gardentool,hatcher,lottery,luckyroll,material,medicine,mergerecipe,mine,monster,petarmor,petbadge,petfood,petmerge,petproduce,petskill,pstone,reciperoll,refineticket,revivescroll,rune,seed,skill,skillmatter,speaker,specialspeaker,sstone,taskdice,taskmatter,tasknormalmatter,townscroll,transmitroll,vehicleessence";
+  }
+
+  let limit = req.query.limit;
+
   let searchKey = req.query.string;
-  let indexes = req.query.index.split(",");
+  let indexes = index.split(",");
   let data = [];
   let payload;
   async function returnSearch() {
@@ -29,12 +37,16 @@ router.get("/", (req, res) => {
       // Search the current results set to sort all indexes together. Hella redundant but I am dumb.
       let sortSearch = new fuzzysearch(data, ["name"], { sort: true });
       let sortResult = sortSearch.search(searchKey);
-      let dataLength = data.length;
       payload = {
-        ResultsTotal: dataLength,
+        ResultsTotal: 0,
         Results: sortResult,
       };
     }
+    if (limit && limit <= payload.Results.length) {
+      payload.Results.length = limit;
+    }
+    let dataLength = payload.Results.length;
+    payload.ResultsTotal = dataLength;
     res.json(payload);
   }
   returnSearch();
