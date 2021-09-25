@@ -5,7 +5,9 @@ const morgan = require('morgan')
 const port = process.env.PORT;
 
 const createSearch = require('./helpers/createSearch');
+const createContent = require('./helpers/createContent');
 createSearch();
+createContent();
 
 app.set("views", "./views");
 app.set("view engine", "pug");

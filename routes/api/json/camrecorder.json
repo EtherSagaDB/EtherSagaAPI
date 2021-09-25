@@ -1,1 +1,1 @@
-[{"Name":"Genie's Eye","Id":5193,"data":["5193","Genie's Eye","335","976","1","1000","1","151"]},{"Name":"Genie's Eye","Id":5194,"data":["5194","Genie's Eye","335","976","1","1000","1","415"]}]
+[{"ID":"5193","Name":"Genie's Eye","file_matter":"335","file_icon":"976","price":"1","shop_price":"1000","pile_num_max":"1","proc_type":"151"},{"ID":"5194","Name":"Genie's Eye","file_matter":"335","file_icon":"976","price":"1","shop_price":"1000","pile_num_max":"1","proc_type":"415"}]
