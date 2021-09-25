@@ -17,7 +17,5 @@ yarn install && yarn start
 ```
 
 TODO
-
- - [ ] elasticsearch
  - [ ] Item Icons
  - [ ] Better Data Schema or Maps for Data
