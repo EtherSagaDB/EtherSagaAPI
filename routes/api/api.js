@@ -163,4 +163,11 @@ router.use("/transmitroll", transmitroll);
 const vehicleessence = require("./routes/vehicleessence");
 router.use("/vehicleessence", vehicleessence);
 
+router.use((req, res, next) => {
+  const err = new Error('Not Found')
+  err.status = 404;
+  res.json({Code: 404})
+  next(err)
+})
+
 module.exports = router;
