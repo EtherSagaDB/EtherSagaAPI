@@ -28,7 +28,7 @@ async function createSearch() {
     for (const item of JSON.parse(data)) {
       let searchItem = {
         name: item.Name,
-        ID: item.Id,
+        ID: item.ID,
       };
       searchArray.push(searchItem);
     }

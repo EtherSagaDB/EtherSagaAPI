@@ -32,6 +32,7 @@ router.get("/", (req, res) => {
       let result = searcher.search(searchKey);
       for (let item of result) {
         item.index = index;
+        console.log(item)
         data.push(item);
       }
       // Search the current results set to sort all indexes together. Hella redundant but I am dumb.
