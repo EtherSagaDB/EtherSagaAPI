@@ -13,6 +13,9 @@ router.use(cors());
 
 const fs = require("fs");
 
+const search = require("./routes/search");
+router.use("/search", search);
+
 router.get("/:list", (req, res) => {
   let file = fs.readFileSync(__dirname + `/json/${req.params.list}.json`);
   let data = JSON.parse(file);
@@ -30,9 +33,6 @@ router.get("/:list/:id", (req, res) => {
   let result = data.find((x) => x.ID === req.params.id);
   res.json(result);
 });
-
-const search = require("./routes/search");
-router.use("/search", search);
 
 router.use((req, res, next) => {
   const err = new Error("Not Found");
