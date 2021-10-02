@@ -9,9 +9,9 @@ const createContent = require("./helpers/createContent");
 createSearch();
 createContent();
 
-app.set("views", "./views");
+app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
-app.use(express.static("./views/assets"));
+app.use(express.static(__dirname + "/views/assets"));
 
 let iconpath = __dirname + `/routes/api/icons/`;
 app.use(express.static(iconpath));

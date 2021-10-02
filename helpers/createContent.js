@@ -18,7 +18,7 @@ const walk = function (dir) {
   };
 
 async function createContent() {
-    let path = __dirname + "\\..\\routes\\api\\json\\"
+    let path = __dirname + "/../routes/api/json/"
     let content = walk(path);
     let array = [];
     for (let part of content) {
