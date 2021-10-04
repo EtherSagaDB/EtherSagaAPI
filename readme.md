@@ -18,4 +18,3 @@ yarn install && yarn start
 
 TODO
  - [ ] Item Icons
- - [ ] Better Data Schema or Maps for Data
