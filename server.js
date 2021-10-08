@@ -38,10 +38,8 @@ app.use("/api", api);
 
 // Catch 404s
 app.use((req, res, next) => {
-  const err = new Error("Not Found");
-  err.status = 404;
+  res.status = 404;
   res.redirect("/404");
-  next(err);
 });
 
 app.listen(port, () => {
