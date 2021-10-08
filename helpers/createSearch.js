@@ -29,6 +29,7 @@ async function createSearch() {
       let searchItem = {
         name: item.Name,
         ID: item.ID,
+        icon: item.file_icon
       };
       searchArray.push(searchItem);
     }
