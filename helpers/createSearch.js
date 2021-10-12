@@ -26,10 +26,18 @@ async function createSearch() {
     let data = await fs.readFileSync(endpoint, { encoding: "utf-8" });
     let searchArray = [];
     for (const item of JSON.parse(data)) {
+      let level;
+      if (item["Require Level"]) {
+        level = item["Require Level"]
+      } else {
+        level = null
+      }
+      // console.log(level)
       let searchItem = {
         name: item.Name,
         ID: item.ID,
-        icon: item.file_icon
+        icon: item.file_icon,
+        levelReq: level
       };
       searchArray.push(searchItem);
     }
