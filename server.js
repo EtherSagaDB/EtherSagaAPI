@@ -13,9 +13,6 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "pug");
 app.use(express.static(__dirname + "/views/assets"));
 
-let iconpath = __dirname + `/routes/api/icons/`;
-app.use(express.static(iconpath));
-
 app.set("trust proxy", 1);
 
 app.use(morgan("common"));
@@ -31,8 +28,6 @@ app.get("/404", (req, res) => {
 // routes
 const docs = require("./routes/docs");
 app.use(["/docs", "/documentation"], docs);
-const icons = require("./routes/icons");
-app.use("/icons", icons);
 const api = require("./routes/api/api.js");
 app.use("/api", api);
 

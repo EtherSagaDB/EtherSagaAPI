@@ -15,6 +15,8 @@ const fs = require("fs");
 
 const search = require("./routes/search");
 router.use("/search", search);
+const icons = require("./icons");
+router.use("/icons", icons);
 
 router.get("/:list", (req, res) => {
   if (!fs.existsSync(__dirname + `/json/${req.params.list}.json`)) {
